@@ -38,9 +38,9 @@ public class SQLGatewayServlet extends HttpServlet {
         String sqlResult = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/murach";
-            String userName = "root";
-            String password = "0411";
+            String url = "jdbc:mysql://azure-server-murach-123.mysql.database.azure.com:3306/murach?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            String userName = "ductho";
+            String password = "Tho0411@";
             Connection connection = DriverManager.getConnection(url, userName, password);
             Statement statement = connection.createStatement();
             sqlStatement = sqlStatement.trim();
